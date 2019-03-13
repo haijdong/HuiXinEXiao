@@ -32,3 +32,9 @@ proguard/
 
 
 local.properties
+module_user/module_user.iml
+module_school/module_school.iml
+module_main/module_main.iml
+module_card/module_card.iml
+module_app/module_app.iml
+common_base/common_base.iml
