@@ -1,0 +1,84 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/out"
+    android:background="#1c747272"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/card_scan"
+        style="@style/Txt_MENU_R_22"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:drawableTop="@drawable/head_img"
+        android:layout_toLeftOf="@+id/card_authcode"
+        android:layout_marginBottom="@dimen/x150"
+        android:layout_marginRight="@dimen/x110"
+        android:layout_alignParentBottom="true"
+        android:text="@string/card_scan" />
+
+    <TextView
+        android:id="@+id/card_authcode"
+        style="@style/Txt_MENU_R_22"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:drawableTop="@drawable/head_img"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/x330"
+        android:layout_alignParentBottom="true"
+        android:text="@string/card_authcode"/>
+
+    <TextView
+        android:id="@+id/card_paycode"
+        style="@style/Txt_MENU_R_22"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:drawableTop="@drawable/head_img"
+        android:layout_toLeftOf="@+id/card_authcode"
+        android:layout_marginBottom="@dimen/x260"
+        android:layout_marginRight="@dimen/x40"
+        android:layout_alignParentBottom="true"
+        android:text="@string/card_paycode"/>
+
+    <TextView
+        android:id="@+id/card_bill"
+        style="@style/Txt_MENU_R_22"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:drawableTop="@drawable/head_img"
+        android:layout_toRightOf="@+id/card_authcode"
+        android:layout_marginBottom="@dimen/x260"
+        android:layout_marginLeft="@dimen/x40"
+        android:layout_alignParentBottom="true"
+        android:text="@string/card_bill"/>
+
+    <TextView
+        android:id="@+id/card_transfer"
+        style="@style/Txt_MENU_R_22"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:drawableTop="@drawable/head_img"
+        android:layout_toRightOf="@+id/card_authcode"
+        android:layout_marginBottom="@dimen/x150"
+        android:layout_marginLeft="@dimen/x110"
+        android:layout_alignParentBottom="true"
+        android:text="@string/card_transfer"/>
+
+
+    <ImageView
+        android:id="@+id/center_music_window_close"
+        style="@style/Txt_MENU_R_22"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="78dip"
+        android:layout_toRightOf="@+id/card_bill"
+        android:src="@drawable/head_img" />
+
+</RelativeLayout>
