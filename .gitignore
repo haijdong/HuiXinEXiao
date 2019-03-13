@@ -28,3 +28,7 @@ proguard/
 # Others
 .idea/
 *.iml
+*.properties
+
+
+local.properties
