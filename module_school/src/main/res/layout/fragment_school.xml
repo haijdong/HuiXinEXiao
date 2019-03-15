@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:id="@+id/school1"
+        android:background="#ff0"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:text="school1" />
+
+    <TextView
+        android:id="@+id/school2"
+        android:background="#ff0"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:text="school2" />
+
+    <TextView
+        android:id="@+id/school3"
+        android:background="#ff0"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:text="school3" />
+
+    <TextView
+        android:id="@+id/school4"
+        android:background="#ff0"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:text="school4" />
+
+    <TextView
+        android:id="@+id/school5"
+        android:background="#ff0"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:text="school5" />
+
+    <TextView
+        android:id="@+id/school6"
+        android:background="#ff0"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:text="school6" />
+</LinearLayout>

@@ -6,10 +6,13 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
 
+import androidx.annotation.IdRes;
 import androidx.annotation.Nullable;
 
+import com.synjones.common_base.app.ViewManager;
 import com.synjones.common_base.utils.StatusBarUtil;
 import com.synjones.common_base.utils.SystemBarUtil;
+import com.synjones.common_base.utils.Utils;
 import com.synjones.common_base.view.loading.ProgressDialog;
 import com.trello.rxlifecycle2.components.support.RxAppCompatActivity;
 
@@ -30,6 +33,7 @@ public abstract class BaseActivity extends RxAppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        ViewManager.getInstance().addActivity(this);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         initSystemBarStyle(getSystemBarColor());
         StatusBarUtil.darkMode(this);
@@ -76,6 +80,7 @@ public abstract class BaseActivity extends RxAppCompatActivity {
     @Override
     protected void onDestroy() {
         super.onDestroy();
+        ViewManager.getInstance().addActivity(this);
         if (useEventBus()) {
             if (EventBus.getDefault().isRegistered(this)) {
                 EventBus.getDefault().unregister(this);//注销eventBus
@@ -190,5 +195,84 @@ public abstract class BaseActivity extends RxAppCompatActivity {
     protected abstract void initData();
 
 
+    /**
+     * 添加fragment
+     *
+     * @param fragment
+     * @param frameId
+     */
+    protected void addFragment(BaseFragment fragment, @IdRes int frameId) {
+        Utils.checkNotNull(fragment);
+        getSupportFragmentManager().beginTransaction()
+                .add(frameId, fragment, fragment.getClass().getSimpleName())
+                .addToBackStack(fragment.getClass().getSimpleName())
+                .commitAllowingStateLoss();
 
+    }
+
+
+    /**
+     * 替换fragment
+     * @param fragment
+     * @param frameId
+     */
+    protected void replaceFragment(BaseFragment fragment, @IdRes int frameId) {
+        Utils.checkNotNull(fragment);
+        getSupportFragmentManager().beginTransaction()
+                .replace(frameId, fragment, fragment.getClass().getSimpleName())
+                .addToBackStack(fragment.getClass().getSimpleName())
+                .commitAllowingStateLoss();
+
+    }
+
+
+    /**
+     * 隐藏fragment
+     * @param fragment
+     */
+    protected void hideFragment(BaseFragment fragment) {
+        Utils.checkNotNull(fragment);
+        getSupportFragmentManager().beginTransaction()
+                .hide(fragment)
+                .commitAllowingStateLoss();
+
+    }
+
+
+    /**
+     * 显示fragment
+     * @param fragment
+     */
+    protected void showFragment(BaseFragment fragment) {
+        Utils.checkNotNull(fragment);
+        getSupportFragmentManager().beginTransaction()
+                .show(fragment)
+                .commitAllowingStateLoss();
+
+    }
+
+
+    /**
+     * 移除fragment
+     * @param fragment
+     */
+    protected void removeFragment(BaseFragment fragment) {
+        Utils.checkNotNull(fragment);
+        getSupportFragmentManager().beginTransaction()
+                .remove(fragment)
+                .commitAllowingStateLoss();
+
+    }
+
+
+    /**
+     * 弹出栈顶部的Fragment
+     */
+    protected void popFragment() {
+        if (getSupportFragmentManager().getBackStackEntryCount() > 1) {
+            getSupportFragmentManager().popBackStack();
+        } else {
+            finish();
+        }
+    }
 }

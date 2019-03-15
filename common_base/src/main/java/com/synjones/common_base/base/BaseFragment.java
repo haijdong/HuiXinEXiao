@@ -3,6 +3,8 @@ package com.synjones.common_base.base;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+
+import androidx.annotation.IdRes;
 import androidx.annotation.LayoutRes;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -14,6 +16,7 @@ import com.squareup.leakcanary.RefWatcher;
 import com.synjones.common_base.app.BaseApplication;
 import com.synjones.common_base.mvp.BasePresenter;
 import com.synjones.common_base.mvp.IView;
+import com.synjones.common_base.utils.Utils;
 import com.trello.rxlifecycle2.components.support.RxFragment;
 
 import org.greenrobot.eventbus.EventBus;
@@ -26,14 +29,12 @@ import org.greenrobot.eventbus.EventBus;
  * des     :  fragment 基类
  */
 public abstract class BaseFragment<T extends BasePresenter> extends RxFragment implements IView {
-
+    protected BaseActivity mActivity;
     /**
      * 将代理类通用行为抽出来
      */
     protected T mPresenter;
 
-
-    private BaseActivity mActivity;
     /**
      * 缓存Fragment view
      */
@@ -187,4 +188,79 @@ public abstract class BaseFragment<T extends BasePresenter> extends RxFragment i
         startActivityForResult(cls, null, requestCode);
     }
 
+    /**
+     * 获取宿主Activity
+     *
+     * @return BaseActivity
+     */
+    protected BaseActivity getHoldingActivity() {
+        return mActivity;
+    }
+
+
+    /**
+     * 添加fragment
+     *
+     * @param fragment
+     * @param frameId
+     */
+    protected void addFragment(BaseFragment fragment, @IdRes int frameId) {
+        Utils.checkNotNull(fragment);
+        getHoldingActivity().addFragment(fragment, frameId);
+
+    }
+
+
+    /**
+     * 替换fragment
+     *
+     * @param fragment
+     * @param frameId
+     */
+    protected void replaceFragment(BaseFragment fragment, @IdRes int frameId) {
+        Utils.checkNotNull(fragment);
+        getHoldingActivity().replaceFragment(fragment, frameId);
+    }
+
+
+    /**
+     * 隐藏fragment
+     *
+     * @param fragment
+     */
+    protected void hideFragment(BaseFragment fragment) {
+        Utils.checkNotNull(fragment);
+        getHoldingActivity().hideFragment(fragment);
+    }
+
+
+    /**
+     * 显示fragment
+     *
+     * @param fragment
+     */
+    protected void showFragment(BaseFragment fragment) {
+        Utils.checkNotNull(fragment);
+        getHoldingActivity().showFragment(fragment);
+    }
+
+
+    /**
+     * 移除Fragment
+     *
+     * @param fragment
+     */
+    protected void removeFragment(BaseFragment fragment) {
+        Utils.checkNotNull(fragment);
+        getHoldingActivity().removeFragment(fragment);
+
+    }
+
+
+    /**
+     * 弹出栈顶部的Fragment
+     */
+    protected void popFragment() {
+        getHoldingActivity().popFragment();
+    }
 }

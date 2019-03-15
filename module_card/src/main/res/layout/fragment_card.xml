@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:id="@+id/card1"
+        android:background="#ff0"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:text="card" />
+
+    <TextView
+        android:id="@+id/card2"
+        android:background="#ff0"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:text="card2" />
+
+    <TextView
+        android:id="@+id/card3"
+        android:background="#ff0"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:text="card3" />
+
+    <TextView
+        android:id="@+id/card4"
+        android:background="#ff0"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:text="card4" />
+
+    <TextView
+        android:id="@+id/card5"
+        android:background="#ff0"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:text="card5" />
+
+    <TextView
+        android:id="@+id/card6"
+        android:background="#ff0"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:text="card6" />
+</LinearLayout>

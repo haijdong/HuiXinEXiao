@@ -13,11 +13,12 @@ android {
         versionName configInfo.versionName
 
         javaCompileOptions {
+
             annotationProcessorOptions {
                 includeCompileClasspath = true
-                arguments = [moduleName: project.getName()]
-            }
-        }
+                arguments = [AROUTER_MODULE_NAME :project.getName() ]
+
+            } }
     }
 
     sourceSets {
@@ -48,5 +49,6 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
+    annotationProcessor 'com.alibaba:arouter-compiler:1.2.2'
     implementation project(':common_base')
 }

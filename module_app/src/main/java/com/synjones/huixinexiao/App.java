@@ -2,6 +2,7 @@ package com.synjones.huixinexiao;
 
 import android.content.Context;
 
+import com.alibaba.android.arouter.launcher.ARouter;
 import com.synjones.common_base.app.BaseApplication;
 import com.synjones.common_base.utils.AppUtils;
 import com.synjones.common_base.utils.CommonUtils;
@@ -28,12 +29,12 @@ public class App extends BaseApplication {
     @Override
     public void onCreate() {
         super.onCreate();
-//        if (AppUtils.isAppDebug(this)) {
-//            //开启InstantRun之后，一定要在ARouter.init之前调用openDebug
-//            ARouter.openDebug();
-//            ARouter.openLog();
-//        }
-//        ARouter.init(this);
+        if (AppUtils.isAppDebug(this)) {
+            //开启InstantRun之后，一定要在ARouter.init之前调用openDebug
+            ARouter.openDebug();
+            ARouter.openLog();
+        }
+        ARouter.init(this);
 
         //Bugly
         initBugly();
