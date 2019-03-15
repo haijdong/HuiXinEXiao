@@ -1,1 +1,1 @@
-include ':common_base', ':module_card', ':module_school', ':module_user', ':module_main','module_app'
+include ':common_base', ':module_card', ':module_school', ':module_user', ':module_main', 'module_app', ':module_circle'

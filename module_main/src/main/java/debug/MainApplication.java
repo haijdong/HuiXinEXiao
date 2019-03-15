@@ -1,7 +1,6 @@
 package debug;
 
-import com.orhanobut.logger.Logger;
-import com.synjones.common_base.app.BaseApplication;
+import com.synjones.huixinexiao.common_base.app.BaseApplication;
 
 /**
  * <p>类说明</p>

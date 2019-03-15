@@ -3,12 +3,11 @@ package com.synjones.huixinexiao;
 import android.content.Context;
 
 import com.alibaba.android.arouter.launcher.ARouter;
-import com.synjones.common_base.app.BaseApplication;
-import com.synjones.common_base.utils.AppUtils;
-import com.synjones.common_base.utils.CommonUtils;
+import com.synjones.huixinexiao.common_base.app.BaseApplication;
+import com.synjones.huixinexiao.common_base.utils.AppUtils;
+import com.synjones.huixinexiao.common_base.utils.CommonUtils;
 
 import androidx.multidex.MultiDex;
-import butterknife.internal.Utils;
 
 
 /**

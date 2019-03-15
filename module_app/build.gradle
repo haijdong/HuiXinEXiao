@@ -41,6 +41,7 @@ dependencies {
         implementation project(':module_main')
         implementation project(':module_card')
         implementation project(':module_school')
+        implementation project(':module_circle')
         implementation project(':module_user')
     }
 }

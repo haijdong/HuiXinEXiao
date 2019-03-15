@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <com.synjones.common_base.view.NoScrollViewPager
+    <com.synjones.huixinexiao.common_base.view.NoScrollViewPager
         android:id="@+id/container_pager"
         android:layout_width="match_parent"
         android:layout_height="0dp"

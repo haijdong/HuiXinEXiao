@@ -1,6 +1,6 @@
 package com.debug;
 
-import com.synjones.common_base.app.BaseApplication;
+import com.synjones.huixinexiao.common_base.app.BaseApplication;
 
 /**
  * <p>类说明</p>

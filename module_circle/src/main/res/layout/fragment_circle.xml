@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:id="@+id/circle1"
+        android:background="#ff0"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:text="circle1" />
+
+    <TextView
+        android:id="@+id/circle2"
+        android:background="#ff0"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:text="circle2" />
+
+    <TextView
+        android:id="@+id/circle3"
+        android:background="#ff0"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:text="circle3" />
+
+    <TextView
+        android:id="@+id/circle4"
+        android:background="#ff0"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:text="circle4" />
+
+    <TextView
+        android:id="@+id/circle5"
+        android:background="#ff0"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:text="circle5" />
+
+    <TextView
+        android:id="@+id/circle6"
+        android:background="#ff0"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:text="circle6" />
+</LinearLayout>

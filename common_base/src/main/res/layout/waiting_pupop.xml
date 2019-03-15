@@ -4,7 +4,7 @@
     android:background="@android:color/transparent"
     >
 
-    <com.synjones.common_base.view.loading.LoadingView
+    <com.synjones.huixinexiao.common_base.view.loading.LoadingView
         android:id="@+id/loadingView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
