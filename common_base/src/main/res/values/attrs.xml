@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- viewpage指示器 -->
+    <declare-styleable name="PagerSlidingTabStrip">
+        <attr name="pstsIndicatorTextSize" format="dimension" />
+        <attr name="pstsIndicatorColor" format="color" />
+        <attr name="pstsUnderlineColor" format="color" />
+        <attr name="pstsDividerColor" format="color" />
+        <attr name="pstsIndicatorHeight" format="dimension" />
+        <!--底部下划线的宽度-->
+        <attr name="pstsIndicatorWidth" format="dimension" />
+        <attr name="pstsUnderlineHeight" format="dimension" />
+        <attr name="pstsDividerPadding" format="dimension" />
+        <attr name="pstsTabPaddingLeftRight" format="dimension" />
+        <attr name="pstsScrollOffset" format="dimension" />
+        <attr name="pstsTabBackground" format="reference" />
+        <attr name="pstsShouldExpand" format="boolean" />
+        <attr name="pstsTextAllCaps" format="boolean" />
+        <attr name="pstsArrowImg" format="reference" />
+        <attr name="pstSelectedTabTextColor" format="color" />
+        <attr name="pstNormalTabTextColor" format="color" />
+        <attr name="pstLayoutType">
+            <enum name="linear" value="0" />
+            <enum name="relative" value="1" />
+        </attr>
+    </declare-styleable>
+
+    <!--下载进度条-->
+    <declare-styleable name="FreshDownloadView">
+        <attr name="circular_radius" format="dimension" />
+        <attr name="circular_color" format="color" />
+        <attr name="circular_progress_color" format="color" />
+        <attr name="circular_width" format="dimension" />
+        <attr name="progress_text_size" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="TitleBar">
+        <!--标题-->
+        <attr name="title" format="string" />
+        <!--右边文字-->
+        <attr name="rightText" format="string" />
+        <!--右边图片-->
+        <attr name="rightIcon" format="reference" />
+        <!--右边文字是否可见-->
+        <attr name="rightTextVisible" format="boolean" />
+        <!--右边图片是否可见-->
+        <attr name="rightIconVisible" format="boolean" />
+        <!--是否隐藏返回键-->
+        <attr name="backVisible" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="SwipeMenuLayout">
+        <attr name="swipeEnable" format="boolean"/>
+        <attr name="ios" format="boolean"/>
+        <attr name="leftSwipe" format="boolean"/>
+    </declare-styleable>
+
+</resources>

@@ -4,6 +4,7 @@ package com.synjones.huixinexiao.module_main.main;
 import android.view.MenuItem;
 import android.view.View;
 
+import com.alibaba.android.arouter.launcher.ARouter;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.synjones.huixinexiao.common_base.app.ClassUtils;
 import com.synjones.huixinexiao.common_base.app.IViewDelegate;
@@ -126,7 +127,7 @@ public class MainActivity extends BaseMvpActivity<MainPresenter> implements Main
                     switch (action) {
                         case 1:  //扫一扫
 //                            startActivity(CaptureActivity.class);
-
+                            ARouter.getInstance().build("/card/card").navigation();
                             break;
 
                         case 2:  //认证码
