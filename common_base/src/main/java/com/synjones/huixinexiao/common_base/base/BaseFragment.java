@@ -69,6 +69,17 @@ public abstract class BaseFragment<T extends BasePresenter> extends RxFragment i
     }
 
 
+    /**
+     * 查找控件
+     * @param viewId
+     */
+    public View findViewById(int viewId) {
+        if (null != mRootView) {
+            return mRootView.findViewById(viewId);
+        }
+        return null;
+    }
+
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);

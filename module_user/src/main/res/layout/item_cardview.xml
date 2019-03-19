@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@drawable/item_cardview"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.synjones.huixinexiao.common_base.view.RoundImageView
+        android:id="@+id/imageview"
+        android:scaleType="centerCrop"
+        android:padding="@dimen/x2"
+        android:layout_marginTop="@dimen/x2"
+        android:layout_marginBottom="@dimen/x2"
+        android:layout_centerInParent="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</RelativeLayout>

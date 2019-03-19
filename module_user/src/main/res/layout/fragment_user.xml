@@ -2,60 +2,204 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/bg_user"
+    android:clipChildren="false"
+    android:layerType="software"
     android:orientation="vertical">
 
+    <RelativeLayout
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x88">
+
+        <TextView
+            style="@style/Txt_1_R_36"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/infomation" />
+
+        <TextView
+            android:id="@+id/setting"
+            style="@style/Txt_1_R_36"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:text="@string/setting" />
+
+    </RelativeLayout>
+
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/x320"
+        android:layout_gravity="center"
+        android:clipChildren="false">
+
+    </androidx.viewpager.widget.ViewPager>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x150"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="bottom"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/banlance_num"
+                    style="@style/Txt_1_B_32"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1111" />
+
+                <TextView
+                    style="@style/Txt_2_R_28"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/x5"
+                    android:text="@string/yuan" />
+
+            </LinearLayout>
+
+            <TextView
+                style="@style/Txt_1_B_32"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/x10"
+                android:text="@string/balance" />
+        </LinearLayout>
+
+        <View
+            style="@style/CommonLine"
+            android:layout_width="@dimen/x1"
+            android:layout_height="match_parent" />
+
+        <LinearLayout
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="bottom"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/walk_num"
+                    style="@style/Txt_1_B_32"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1111" />
+
+                <TextView
+                    style="@style/Txt_2_R_28"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/x5"
+                    android:text="@string/bu" />
+
+            </LinearLayout>
+
+            <TextView
+                style="@style/Txt_1_B_32"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/x10"
+                android:text="@string/health" />
+
+        </LinearLayout>
+
+        <View
+            style="@style/CommonLine"
+            android:layout_width="@dimen/x1"
+            android:layout_height="match_parent" />
+
+        <LinearLayout
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="bottom"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/coupon_num"
+                    style="@style/Txt_1_B_32"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1111" />
+
+                <TextView
+                    style="@style/Txt_2_R_28"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/x5"
+                    android:text="@string/zhang" />
+
+            </LinearLayout>
+
+            <TextView
+                style="@style/Txt_1_B_32"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/x10"
+                android:text="@string/coupon" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <View
+        style="@style/CommonLine"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x10" />
+
+    <RelativeLayout
+        android:id="@+id/service"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x98">
+
+        <TextView
+            style="@style/common_textview_drawleft"
+            android:drawableLeft="@mipmap/ic_launcher"
+            android:text="@string/card_bill" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/x30"
+            android:src="@mipmap/ic_launcher" />
+    </RelativeLayout>
 
     <TextView
-        android:id="@+id/user1"
-        android:background="#ff0"
+        android:id="@+id/exit"
+        style="@style/Txt_1_R_36"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x98"
         android:gravity="center"
-        android:layout_marginTop="10dp"
-        android:layout_width="100dp"
-        android:layout_height="50dp"
-        android:text="user1" />
-
-    <TextView
-        android:id="@+id/user2"
-        android:background="#ff0"
-        android:gravity="center"
-        android:layout_marginTop="10dp"
-        android:layout_width="100dp"
-        android:layout_height="50dp"
-        android:text="user2" />
-
-    <TextView
-        android:id="@+id/user3"
-        android:background="#ff0"
-        android:gravity="center"
-        android:layout_marginTop="10dp"
-        android:layout_width="100dp"
-        android:layout_height="50dp"
-        android:text="user3" />
-
-    <TextView
-        android:id="@+id/user4"
-        android:background="#ff0"
-        android:gravity="center"
-        android:layout_marginTop="10dp"
-        android:layout_width="100dp"
-        android:layout_height="50dp"
-        android:text="user4" />
-
-    <TextView
-        android:id="@+id/user5"
-        android:background="#ff0"
-        android:gravity="center"
-        android:layout_marginTop="10dp"
-        android:layout_width="100dp"
-        android:layout_height="50dp"
-        android:text="user5" />
-
-    <TextView
-        android:id="@+id/user6"
-        android:background="#ff0"
-        android:gravity="center"
-        android:layout_marginTop="10dp"
-        android:layout_width="100dp"
-        android:layout_height="50dp"
-        android:text="user6" />
+        android:text="@string/exit" />
 </LinearLayout>
