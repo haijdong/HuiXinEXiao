@@ -1,11 +1,13 @@
-package com.synjones.huixinexiao.module_main.main;
+package com.synjones.huixinexiao.module_main.main.view;
 
 
 import android.view.MenuItem;
 import android.view.View;
 
+import com.alibaba.android.arouter.facade.annotation.Route;
 import com.alibaba.android.arouter.launcher.ARouter;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.synjones.huixinexiao.common_base.app.AppConstants;
 import com.synjones.huixinexiao.common_base.app.ClassUtils;
 import com.synjones.huixinexiao.common_base.app.IViewDelegate;
 import com.synjones.huixinexiao.common_base.app.ViewManager;
@@ -13,14 +15,17 @@ import com.synjones.huixinexiao.common_base.base.BaseFragment;
 import com.synjones.huixinexiao.common_base.base.BaseMvpActivity;
 import com.synjones.huixinexiao.common_base.view.NoScrollViewPager;
 import com.synjones.huixinexiao.module_main.R;
-import com.synjones.huixinexiao.module_main.data.entity.TestNews;
+import com.synjones.huixinexiao.module_main.main.data.entity.TestNews;
+import com.synjones.huixinexiao.module_main.main.adapter.FragmentAdapter;
+import com.synjones.huixinexiao.module_main.main.persenter.impl.MainPresenter;
+import com.synjones.huixinexiao.module_main.main.persenter.MainContract;
 import com.synjones.huixinexiao.module_main.view.menu.MenuWindow;
 
 import java.util.List;
 
 import io.reactivex.annotations.NonNull;
 
-
+@Route(path = AppConstants.ACTIVITY_URL_MAIN)
 public class MainActivity extends BaseMvpActivity<MainPresenter> implements MainContract.View {
 
     private MenuWindow mMoreWindow;
@@ -61,10 +66,10 @@ public class MainActivity extends BaseMvpActivity<MainPresenter> implements Main
     @Override
     protected void initView() {
         setContentView(R.layout.activity_main);
-
         navigation = (BottomNavigationView) findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
         initViewPager();
+        navigation.setSelectedItemId(R.id.navigation_home);
 
     }
 

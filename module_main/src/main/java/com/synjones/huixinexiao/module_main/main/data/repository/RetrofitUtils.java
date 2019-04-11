@@ -1,7 +1,7 @@
-package com.synjones.huixinexiao.module_main.data.repository;
+package com.synjones.huixinexiao.module_main.main.data.repository;
 
 import com.synjones.huixinexiao.common_base.net.BaseRetrofit;
-import com.synjones.huixinexiao.module_main.data.api.ApiService;
+import com.synjones.huixinexiao.module_main.main.data.api.ApiService;
 
 /**
  * @author xuhao

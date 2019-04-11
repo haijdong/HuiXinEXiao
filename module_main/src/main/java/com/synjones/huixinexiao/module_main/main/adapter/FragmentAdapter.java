@@ -1,4 +1,4 @@
-package com.synjones.huixinexiao.module_main.main;
+package com.synjones.huixinexiao.module_main.main.adapter;
 
 
 

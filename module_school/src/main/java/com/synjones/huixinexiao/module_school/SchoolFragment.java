@@ -2,6 +2,8 @@ package com.synjones.huixinexiao.module_school;
 
 
 
+import android.view.View;
+
 import com.synjones.huixinexiao.common_base.base.BaseFragment;
 
 
@@ -23,10 +25,6 @@ public class SchoolFragment extends BaseFragment<SchoolPresenter> implements Sch
         return fragment;
     }
 
-    @Override
-    protected int getLayoutId() {
-        return R.layout.fragment_school;
-    }
 
     @Override
     protected SchoolPresenter createPresenter() {
@@ -35,7 +33,7 @@ public class SchoolFragment extends BaseFragment<SchoolPresenter> implements Sch
 
     @Override
     protected void initView() {
-
+        mView = View.inflate(getActivity(), R.layout.fragment_school, null);
     }
 
     @Override

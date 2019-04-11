@@ -1,10 +1,10 @@
-package com.synjones.huixinexiao.module_main.data.api;
+package com.synjones.huixinexiao.module_main.main.data.api;
 
 
 
 import com.synjones.huixinexiao.common_base.net.BaseHttpResult;
-import com.synjones.huixinexiao.module_main.data.entity.HotWord;
-import com.synjones.huixinexiao.module_main.data.entity.TestNews;
+import com.synjones.huixinexiao.module_main.main.data.entity.HotWord;
+import com.synjones.huixinexiao.module_main.main.data.entity.TestNews;
 
 
 import java.util.List;

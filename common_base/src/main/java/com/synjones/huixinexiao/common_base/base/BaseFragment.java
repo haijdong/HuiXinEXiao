@@ -38,22 +38,23 @@ public abstract class BaseFragment<T extends BasePresenter> extends RxFragment i
     /**
      * 缓存Fragment view
      */
-    private View mRootView;
+    protected View mView;
 
-    @Nullable
     @Override
-    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        if(mRootView==null){
-            mRootView=inflater.inflate(getLayoutId(),null);
-            if (useEventBus()) {
-                EventBus.getDefault().register(this);//注册eventBus
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        if (null != mView) {
+            ViewGroup parent = (ViewGroup) mView.getParent();
+            if (null != parent) {
+                mView.destroyDrawingCache();
+                parent.removeView(mView);
+                mView = null;
             }
+        } else {
+            initView();
+            initListener();
+            initData();
         }
-        ViewGroup parent= (ViewGroup) mRootView.getParent();
-        if(parent!=null){
-            parent.removeView(mRootView);
-        }
-        return mRootView;
+        return mView;
     }
 
 
@@ -64,8 +65,7 @@ public abstract class BaseFragment<T extends BasePresenter> extends RxFragment i
         if (mPresenter != null) {
             mPresenter.attachView(this);
         }
-        initView();
-        initListener();
+
     }
 
 
@@ -74,8 +74,8 @@ public abstract class BaseFragment<T extends BasePresenter> extends RxFragment i
      * @param viewId
      */
     public View findViewById(int viewId) {
-        if (null != mRootView) {
-            return mRootView.findViewById(viewId);
+        if (null != mView) {
+            return mView.findViewById(viewId);
         }
         return null;
     }
@@ -162,12 +162,6 @@ public abstract class BaseFragment<T extends BasePresenter> extends RxFragment i
     }
 
 
-    /**
-     * 返回一个用于显示界面的布局id
-     */
-    protected abstract @LayoutRes
-    int getLayoutId();
-
     protected abstract T createPresenter();
     /**
      * 初始化View的代码写在这个方法中
@@ -199,79 +193,7 @@ public abstract class BaseFragment<T extends BasePresenter> extends RxFragment i
         startActivityForResult(cls, null, requestCode);
     }
 
-    /**
-     * 获取宿主Activity
-     *
-     * @return BaseActivity
-     */
-    protected BaseActivity getHoldingActivity() {
-        return mActivity;
-    }
 
 
-    /**
-     * 添加fragment
-     *
-     * @param fragment
-     * @param frameId
-     */
-    protected void addFragment(BaseFragment fragment, @IdRes int frameId) {
-        Utils.checkNotNull(fragment);
-        getHoldingActivity().addFragment(fragment, frameId);
 
-    }
-
-
-    /**
-     * 替换fragment
-     *
-     * @param fragment
-     * @param frameId
-     */
-    protected void replaceFragment(BaseFragment fragment, @IdRes int frameId) {
-        Utils.checkNotNull(fragment);
-        getHoldingActivity().replaceFragment(fragment, frameId);
-    }
-
-
-    /**
-     * 隐藏fragment
-     *
-     * @param fragment
-     */
-    protected void hideFragment(BaseFragment fragment) {
-        Utils.checkNotNull(fragment);
-        getHoldingActivity().hideFragment(fragment);
-    }
-
-
-    /**
-     * 显示fragment
-     *
-     * @param fragment
-     */
-    protected void showFragment(BaseFragment fragment) {
-        Utils.checkNotNull(fragment);
-        getHoldingActivity().showFragment(fragment);
-    }
-
-
-    /**
-     * 移除Fragment
-     *
-     * @param fragment
-     */
-    protected void removeFragment(BaseFragment fragment) {
-        Utils.checkNotNull(fragment);
-        getHoldingActivity().removeFragment(fragment);
-
-    }
-
-
-    /**
-     * 弹出栈顶部的Fragment
-     */
-    protected void popFragment() {
-        getHoldingActivity().popFragment();
-    }
 }

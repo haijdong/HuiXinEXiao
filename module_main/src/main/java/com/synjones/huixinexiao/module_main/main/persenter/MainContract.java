@@ -1,10 +1,10 @@
-package com.synjones.huixinexiao.module_main.main;
+package com.synjones.huixinexiao.module_main.main.persenter;
 
 
 import com.synjones.huixinexiao.common_base.mvp.IModel;
 import com.synjones.huixinexiao.common_base.mvp.IView;
 import com.synjones.huixinexiao.common_base.net.BaseHttpResult;
-import com.synjones.huixinexiao.module_main.data.entity.TestNews;
+import com.synjones.huixinexiao.module_main.main.data.entity.TestNews;
 
 import java.util.List;
 

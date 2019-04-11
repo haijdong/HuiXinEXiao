@@ -12,12 +12,8 @@ import java.io.File;
  */
 public class AppConstants {
 
-    /**
-     * Path
-     */
-    public static final String PATH_DATA = Utils.getContext().getApplicationContext().getCacheDir().getAbsolutePath() + File.separator + "data";
+    public static final String ACTIVITY_URL_MAIN = "/main/mainactivity";
 
-    public static final String PATH_CACHE = PATH_DATA + "/NetCache";
 
-    static final String BUGLY_ID = "16e54f8921";
+
 }

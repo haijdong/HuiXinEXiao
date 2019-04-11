@@ -2,60 +2,83 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical">
 
+    <com.synjones.huixinexiao.common_base.view.rootview.TitleBar
+        android:id="@+id/titlebar01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:title="@string/app_name" />
 
-    <TextView
-        android:id="@+id/circle1"
-        android:background="#ff0"
-        android:gravity="center"
-        android:layout_marginTop="10dp"
-        android:layout_width="100dp"
-        android:layout_height="50dp"
-        android:text="circle1" />
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/circle2"
-        android:background="#ff0"
-        android:gravity="center"
-        android:layout_marginTop="10dp"
-        android:layout_width="100dp"
-        android:layout_height="50dp"
-        android:text="circle2" />
 
-    <TextView
-        android:id="@+id/circle3"
-        android:background="#ff0"
-        android:gravity="center"
-        android:layout_marginTop="10dp"
-        android:layout_width="100dp"
-        android:layout_height="50dp"
-        android:text="circle3" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/gray5"
+            android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/circle4"
-        android:background="#ff0"
-        android:gravity="center"
-        android:layout_marginTop="10dp"
-        android:layout_width="100dp"
-        android:layout_height="50dp"
-        android:text="circle4" />
 
-    <TextView
-        android:id="@+id/circle5"
-        android:background="#ff0"
-        android:gravity="center"
-        android:layout_marginTop="10dp"
-        android:layout_width="100dp"
-        android:layout_height="50dp"
-        android:text="circle5" />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x150"
+                android:layout_marginTop="@dimen/x15"
+                android:background="@color/white">
 
-    <TextView
-        android:id="@+id/circle6"
-        android:background="#ff0"
-        android:gravity="center"
-        android:layout_marginTop="10dp"
-        android:layout_width="100dp"
-        android:layout_height="50dp"
-        android:text="circle6" />
+                <ImageView
+                    android:id="@+id/head"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/x30"
+                    android:src="@drawable/head_img" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/x30"
+                    android:layout_toRightOf="@+id/head"
+                    android:orientation="vertical">
+
+
+                    <TextView
+                        android:id="@+id/notice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="系统通知" />
+
+                    <TextView
+                        android:id="@+id/content"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/x20"
+                        android:text="暂时没有通知消息" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/x30"
+                    android:src="@drawable/arrow_r" />
+
+            </RelativeLayout>
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/x20">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+        </LinearLayout>
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
 </LinearLayout>

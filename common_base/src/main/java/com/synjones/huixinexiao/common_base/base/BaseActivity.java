@@ -9,6 +9,8 @@ import android.view.Window;
 import androidx.annotation.IdRes;
 import androidx.annotation.Nullable;
 
+import com.alibaba.android.arouter.launcher.ARouter;
+import com.synjones.huixinexiao.common_base.app.AppConstants;
 import com.synjones.huixinexiao.common_base.app.ViewManager;
 import com.synjones.huixinexiao.common_base.utils.StatusBarUtil;
 import com.synjones.huixinexiao.common_base.utils.SystemBarUtil;
@@ -17,7 +19,6 @@ import com.synjones.huixinexiao.common_base.view.loading.ProgressDialog;
 import com.trello.rxlifecycle2.components.support.RxAppCompatActivity;
 
 import org.greenrobot.eventbus.EventBus;
-
 
 
 /**
@@ -48,19 +49,21 @@ public abstract class BaseActivity extends RxAppCompatActivity {
 
     /**
      * 设置沉浸式标题栏
+     *
      * @param systemBarColor
      */
     protected void initSystemBarStyle(int systemBarColor) {
         if (systemBarColor != 0) {
-            try{
+            try {
                 SystemBarUtil.initSystemBarStyle(this, systemBarColor);
-            }catch(Exception e){
+            } catch (Exception e) {
             }
         }
     }
 
     /**
      * 获取沉浸式标题栏颜色
+     *
      * @return
      */
     protected int getSystemBarColor() {
@@ -89,11 +92,20 @@ public abstract class BaseActivity extends RxAppCompatActivity {
 
     }
 
+
     /**
      * 通过Class跳转界面
      **/
     public void startActivity(Class<?> cls) {
         startActivity(cls, null);
+    }
+
+    /**
+     * 通过ARouter跳转界面
+     * @param path 路径
+     */
+    public void startActivity(String path) {
+        ARouter.getInstance().build(path).navigation();
     }
 
     /**
@@ -176,6 +188,7 @@ public abstract class BaseActivity extends RxAppCompatActivity {
 
     /**
      * 获取弹窗是否正在显示
+     *
      * @return
      */
     protected boolean isLoadingDialogShowing() {
@@ -185,13 +198,19 @@ public abstract class BaseActivity extends RxAppCompatActivity {
         return false;
     }
 
-    /** 初始化View的代码写在这个方法中 */
+    /**
+     * 初始化View的代码写在这个方法中
+     */
     protected abstract void initView();
 
-    /** 初始化监听器的代码写在这个方法中 */
+    /**
+     * 初始化监听器的代码写在这个方法中
+     */
     protected abstract void initListener();
 
-    /** 初始数据的代码写在这个方法中，用于从服务器获取数据 */
+    /**
+     * 初始数据的代码写在这个方法中，用于从服务器获取数据
+     */
     protected abstract void initData();
 
 
@@ -213,6 +232,7 @@ public abstract class BaseActivity extends RxAppCompatActivity {
 
     /**
      * 替换fragment
+     *
      * @param fragment
      * @param frameId
      */
@@ -228,6 +248,7 @@ public abstract class BaseActivity extends RxAppCompatActivity {
 
     /**
      * 隐藏fragment
+     *
      * @param fragment
      */
     protected void hideFragment(BaseFragment fragment) {
@@ -241,6 +262,7 @@ public abstract class BaseActivity extends RxAppCompatActivity {
 
     /**
      * 显示fragment
+     *
      * @param fragment
      */
     protected void showFragment(BaseFragment fragment) {
@@ -254,6 +276,7 @@ public abstract class BaseActivity extends RxAppCompatActivity {
 
     /**
      * 移除fragment
+     *
      * @param fragment
      */
     protected void removeFragment(BaseFragment fragment) {

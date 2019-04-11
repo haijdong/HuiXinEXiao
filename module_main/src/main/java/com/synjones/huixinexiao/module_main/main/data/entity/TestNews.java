@@ -1,4 +1,4 @@
-package com.synjones.huixinexiao.module_main.data.entity;
+package com.synjones.huixinexiao.module_main.main.data.entity;
 
 import java.util.List;
 

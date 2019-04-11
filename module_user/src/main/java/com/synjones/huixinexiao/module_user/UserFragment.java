@@ -40,10 +40,6 @@ public class UserFragment extends BaseFragment<UserPresenter> implements UserCon
         return fragment;
     }
 
-    @Override
-    protected int getLayoutId() {
-        return R.layout.fragment_user;
-    }
 
     @Override
     protected UserPresenter createPresenter() {
@@ -52,6 +48,8 @@ public class UserFragment extends BaseFragment<UserPresenter> implements UserCon
 
     @Override
     protected void initView() {
+        mView = View.inflate(getActivity(), R.layout.fragment_user, null);
+        StatusBarUtil.setPaddingSmart(getActivity(),(RelativeLayout)findViewById(R.id.title));
         mViewPager = (ViewPager) findViewById(R.id.viewPager);
         pagerWidth = (int) (getResources().getDisplayMetrics().widthPixels * 4.0f / 5.0f);
         ViewGroup.LayoutParams lp = mViewPager.getLayoutParams();

@@ -1,6 +1,7 @@
 package com.synjones.huixinexiao.module_card;
 
 
+import com.orhanobut.logger.Logger;
 import com.synjones.huixinexiao.common_base.app.IApplicationDelegate;
 import com.synjones.huixinexiao.common_base.app.ViewManager;
 
@@ -18,7 +19,6 @@ public class MyDelegate implements IApplicationDelegate {
 
     @Override
     public void onCreate() {
-//        Logger.init("pattern");
         //主动添加
         ViewManager.getInstance().addFragment(0, CardFragment.getInstance());
     }

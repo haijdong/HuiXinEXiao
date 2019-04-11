@@ -1,10 +1,11 @@
-package com.synjones.huixinexiao.module_main.main;
+package com.synjones.huixinexiao.module_main.main.model;
 
 
 import com.synjones.huixinexiao.common_base.mvp.BaseModel;
 import com.synjones.huixinexiao.common_base.net.BaseHttpResult;
-import com.synjones.huixinexiao.module_main.data.entity.TestNews;
-import com.synjones.huixinexiao.module_main.data.repository.RetrofitUtils;
+import com.synjones.huixinexiao.module_main.main.data.entity.TestNews;
+import com.synjones.huixinexiao.module_main.main.data.repository.RetrofitUtils;
+import com.synjones.huixinexiao.module_main.main.persenter.MainContract;
 
 import java.util.List;
 
@@ -16,7 +17,7 @@ import io.reactivex.Observable;
  * version :  1.0
  * des     :
  */
-public class MainModel extends BaseModel implements MainContract.Model{
+public class MainModel extends BaseModel implements MainContract.Model {
 
     @Override
     public Observable<BaseHttpResult<List<TestNews>>> getGankData() {

@@ -2,6 +2,8 @@ package com.synjones.huixinexiao.module_card;
 
 
 
+import android.view.View;
+
 import com.synjones.huixinexiao.common_base.base.BaseFragment;
 
 
@@ -23,10 +25,6 @@ public class CardFragment extends BaseFragment<CardPresenter> implements CardCon
         return fragment;
     }
 
-    @Override
-    protected int getLayoutId() {
-        return R.layout.fragment_card;
-    }
 
     @Override
     protected CardPresenter createPresenter() {
@@ -35,7 +33,7 @@ public class CardFragment extends BaseFragment<CardPresenter> implements CardCon
 
     @Override
     protected void initView() {
-
+        mView = View.inflate(getActivity(), R.layout.fragment_card, null);
     }
 
     @Override
