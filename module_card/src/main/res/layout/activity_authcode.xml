@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/CommonBg_GraBlue"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.synjones.huixinexiao.common_base.view.rootview.TitleBar
+        android:id="@+id/titlebar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:title="@string/card_authcode" />
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/refreshView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/x20"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="@dimen/x10"
+                app:cardElevation="@dimen/x10"
+                app:cardMaxElevation="@dimen/x10"
+                app:cardPreventCornerOverlap="true"
+                app:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/x250">
+
+
+                        <ImageView
+                            android:id="@+id/head"
+                            android:layout_centerVertical="true"
+                            android:layout_width="@dimen/x150"
+                            android:layout_height="@dimen/x180"
+                            android:layout_marginLeft="@dimen/x50"
+                            android:scaleType="centerCrop"
+                            android:src="@mipmap/ic_launcher" />
+
+                        <TextView
+                            android:id="@+id/class_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/x50"
+                            android:layout_marginTop="@dimen/x60"
+                            android:layout_toRightOf="@+id/head"
+                            android:text="数字与媒体1801班" />
+
+                        <TextView
+                            android:id="@+id/name"
+                            android:layout_below="@+id/class_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/x50"
+                            android:layout_marginTop="@dimen/x30"
+                            android:layout_toRightOf="@+id/head"
+                            android:text="数字与媒体1801班" />
+
+                        <TextView
+                            android:id="@+id/class_num"
+                            android:layout_below="@+id/name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/x50"
+                            android:layout_marginTop="@dimen/x30"
+                            android:layout_toRightOf="@+id/head"
+                            android:text="数字与媒体1801班" />
+
+                    </RelativeLayout>
+
+
+                    <!-- 二维码图片 -->
+                    <ImageView
+                        android:id="@+id/iv_qrcode"
+                        android:layout_width="@dimen/x450"
+                        android:layout_height="@dimen/x450"
+                        android:layout_alignTop="@+id/img_QRBack"
+                        android:layout_centerHorizontal="true"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginBottom="@dimen/x16"
+                        android:layout_marginTop="@dimen/x16"
+                        android:background="@color/white"
+                        android:clickable="true"
+                        android:scaleType="fitXY" />
+
+                    <TextView
+                        style="@style/Txt_1_R_36"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginBottom="@dimen/x50"
+                        android:text="下路刷新二维码" />
+
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+
+        </LinearLayout>
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+</LinearLayout>

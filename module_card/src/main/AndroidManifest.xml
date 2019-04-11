@@ -7,6 +7,9 @@
         android:theme="@style/BaseAppTheme"
         tools:ignore="GoogleAppIndexingWarning">
         <activity android:name=".CardActivity"/>
+        <activity android:name=".view.PayCodeActivity"/>
+        <activity android:name=".view.AuthCodeActivity"/>
+        <activity android:name=".zxing.CaptureActivity"/>
     </application>
 
 </manifest>

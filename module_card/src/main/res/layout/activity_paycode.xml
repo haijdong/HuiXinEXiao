@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/CommonBg_GraBlue"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.synjones.huixinexiao.common_base.view.rootview.TitleBar
+        android:id="@+id/titlebar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:title="@string/card_paycode" />
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/refreshView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/x20"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="@dimen/x10"
+                app:cardElevation="@dimen/x10"
+                app:cardMaxElevation="@dimen/x10"
+                app:cardPreventCornerOverlap="true"
+                app:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+                    <!--  一维码  -->
+                    <ImageView
+                        android:id="@+id/iv_barcode"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/x150"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginLeft="@dimen/x16"
+                        android:layout_marginRight="@dimen/x16"
+                        android:layout_marginTop="12dp"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitXY" />
+
+                    <!-- 付款码编码 -->
+                    <TextView
+                        android:id="@+id/tv_barcode"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="@dimen/x16"
+                        android:gravity="center"
+                        android:textColor="#FF373535"
+                        android:textSize="14sp"
+                        tools:text="0000 0000 0000 0000 0000" />
+
+
+                    <!-- 二维码图片 -->
+                    <ImageView
+                        android:id="@+id/iv_qrcode"
+                        android:layout_width="@dimen/x450"
+                        android:layout_height="@dimen/x450"
+                        android:layout_alignTop="@+id/img_QRBack"
+                        android:layout_centerHorizontal="true"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginBottom="@dimen/x16"
+                        android:layout_marginTop="@dimen/x16"
+                        android:background="@color/white"
+                        android:clickable="true"
+                        android:scaleType="fitXY" />
+
+                    <View
+                        style="@style/CommonLine"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/x1" />
+
+                    <!--卡包-->
+                    <RelativeLayout
+                        android:id="@+id/cards"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/x120"
+                        android:layout_margin="@dimen/x20">
+
+                        <ImageView
+                            android:id="@+id/icon_pay"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@mipmap/ic_launcher" />
+
+                        <TextView
+                            android:id="@+id/tv_bankcard"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/x20"
+                            android:layout_marginTop="@dimen/x20"
+                            android:layout_toRightOf="@+id/icon_pay"
+                            android:text="现金账户" />
+
+                        <TextView
+                            android:id="@+id/tv_bankdesc"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginBottom="@dimen/x20"
+                            android:layout_marginLeft="@dimen/x20"
+                            android:layout_toRightOf="@+id/icon_pay"
+                            android:text="优先使用付款方式" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerInParent="true"
+                            android:layout_marginRight="@dimen/x20"
+                            android:src="@drawable/btn_back_selector" />
+
+                    </RelativeLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+
+            <TextView
+                android:id="@+id/tv_refresh"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/x30"
+                android:gravity="center"
+                android:text="@string/pay_code_refresh"
+                android:textSize="18dp" />
+
+        </LinearLayout>
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+</LinearLayout>

@@ -15,5 +15,7 @@ public class AppConstants {
     public static final String ACTIVITY_URL_MAIN = "/main/mainactivity";
 
 
-
+    public static final String ACTIVITY_URL_SCAN = "/card/scan";
+    public static final String ACTIVITY_URL_PAYCODE = "/card/paycode";
+    public static final String ACTIVITY_URL_AUTHCODE = "/card/authcode";
 }

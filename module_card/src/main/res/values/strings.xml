@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">module_card</string>
+
+    <!--卡模块-->
+    <string name="card_scan">扫一扫</string>
+    <string name="card_authcode">认证码</string>
+    <string name="card_paycode">付款码</string>
+    <string name="card_bill">账  单</string>
+    <string name="card_transfer">转  账</string>
+    <string name="pay_code_refresh">条码、二维码每分钟自动刷新</string>
 </resources>

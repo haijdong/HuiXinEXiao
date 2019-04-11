@@ -17,6 +17,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".view.PayCodeActivity"/>
+        <activity android:name=".view.AuthCodeActivity"/>
+        <activity android:name=".zxing.CaptureActivity"/>
     </application>
 
 </manifest>

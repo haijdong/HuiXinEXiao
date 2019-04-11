@@ -132,17 +132,18 @@ public class MainActivity extends BaseMvpActivity<MainPresenter> implements Main
                     switch (action) {
                         case 1:  //扫一扫
 //                            startActivity(CaptureActivity.class);
-                            ARouter.getInstance().build("/card/card").navigation();
+                            startActivity(AppConstants.ACTIVITY_URL_SCAN);
+//                            ARouter.getInstance().build("/card/card").navigation();
                             break;
 
                         case 2:  //认证码
 //                            startActivity(AuthCodeActivity.class);
-
+                            startActivity(AppConstants.ACTIVITY_URL_AUTHCODE);
                             break;
 
                         case 3:  //付款码
 //                            startActivity(PayCodeActivity.class);
-
+                            startActivity(AppConstants.ACTIVITY_URL_PAYCODE);
                             break;
 
                         case 4:  //账单

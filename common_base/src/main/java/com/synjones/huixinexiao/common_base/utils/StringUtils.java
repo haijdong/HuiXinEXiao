@@ -466,4 +466,20 @@ public class StringUtils {
         }
         return false;
     }
+
+
+    public static String chaijie(String str) {
+        int max = str.length() / 4;
+        StringBuilder builder = new StringBuilder();
+        for (int i = 0; i < max; i++) {
+            if (i < max - 1) {
+                builder.append(str.substring(i * 4, (i + 1) * 4) + "  ");
+            } else {
+                builder.append(str.substring(i * 4));
+            }
+
+        }
+        return builder.toString();
+
+    }
 }
