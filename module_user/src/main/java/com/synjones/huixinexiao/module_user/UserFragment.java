@@ -17,11 +17,12 @@ import java.util.List;
 import androidx.viewpager.widget.ViewPager;
 
 
+
 /**
- * author  :  donghaijun
- * data    :  2019/3/15
- * version :  1.0
- * des     :  $des$
+ * @author  :  donghaijun
+ * @data    :  2019/3/15
+ * @version :  1.0
+ * @des     :  $des$
  */
 public class UserFragment extends BaseFragment<UserPresenter> implements UserContract.View, View.OnClickListener {
 
@@ -34,9 +35,6 @@ public class UserFragment extends BaseFragment<UserPresenter> implements UserCon
 
     public static UserFragment getInstance() {
         UserFragment fragment = new UserFragment();
-//        Bundle bundle = new Bundle();
-//        fragment.setArguments(bundle);
-//        fragment.mTitle = title;
         return fragment;
     }
 

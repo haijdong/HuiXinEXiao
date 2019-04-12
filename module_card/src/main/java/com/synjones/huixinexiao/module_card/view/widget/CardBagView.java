@@ -24,7 +24,12 @@ import java.util.List;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-
+/**
+ * @author  :  donghaijun
+ * @data    :  2019/3/15
+ * @version :  1.0
+ * @des     :  $des$
+ */
 public class CardBagView extends PopupWindow {
 
     private TypeSelectCallBack mTypeSelectCallBack;

@@ -28,7 +28,12 @@ import android.widget.RelativeLayout.LayoutParams;
 
 import com.synjones.huixinexiao.module_main.R;
 
-
+/**
+ * @author  :  donghaijun
+ * @data    :  2019/3/15
+ * @version :  1.0
+ * @des     :  $des$
+ */
 public class MenuWindow extends PopupWindow implements OnClickListener {
 
     private String TAG = MenuWindow.class.getSimpleName();

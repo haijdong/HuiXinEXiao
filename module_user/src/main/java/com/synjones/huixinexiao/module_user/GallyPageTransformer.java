@@ -5,9 +5,11 @@ import android.view.View;
 import androidx.viewpager.widget.ViewPager;
 
 /**
- * Created by donghaijun on 2018/1/23.
+ * @author  :  donghaijun
+ * @data    :  2019/3/15
+ * @version :  1.0
+ * @des     :  $des$
  */
-
 public class GallyPageTransformer implements ViewPager.PageTransformer {
     private static final float min_scale = 0.7f;
 

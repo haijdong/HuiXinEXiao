@@ -1,7 +1,12 @@
 package com.synjones.huixinexiao.module_main.view.menu;
 
 import android.graphics.Bitmap;
-
+/**
+ * @author  :  donghaijun
+ * @data    :  2019/3/15
+ * @version :  1.0
+ * @des     :  $des$
+ */
 public class FastBlur {
 
 	public static Bitmap doBlur(Bitmap sentBitmap, int radius,

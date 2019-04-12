@@ -13,9 +13,10 @@ import io.reactivex.Observable;
 import retrofit2.http.GET;
 
 /**
- * @author xuhao
- * @date 2018/6/11 23:04
- * @desc
+ * @author  :  donghaijun
+ * @data    :  2019/3/15
+ * @version :  1.0
+ * @des     :  $des$
  */
 public interface ApiService {
 

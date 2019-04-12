@@ -8,10 +8,10 @@ import com.synjones.huixinexiao.common_base.base.BaseFragment;
 
 
 /**
- * author  :  donghaijun
- * data    :  2019/3/15
- * version :  1.0
- * des     :  $des$
+ * @author  :  donghaijun
+ * @data    :  2019/3/15
+ * @version :  1.0
+ * @des     :  $des$
  */
 public class CardFragment extends BaseFragment<CardPresenter> implements CardContract.View {
 

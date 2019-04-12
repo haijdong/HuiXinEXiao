@@ -4,7 +4,10 @@ import com.chad.library.adapter.base.entity.AbstractExpandableItem;
 import com.chad.library.adapter.base.entity.MultiItemEntity;
 
 /**
- * Created by luoxw on 2016/8/10.
+ * @author  :  donghaijun
+ * @data    :  2019/3/15
+ * @version :  1.0
+ * @des     :  $des$
  */
 public class Level0Item extends AbstractExpandableItem<Level1Item> implements MultiItemEntity {
     public String title;

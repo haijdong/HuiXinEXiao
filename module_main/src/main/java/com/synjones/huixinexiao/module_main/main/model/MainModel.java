@@ -12,10 +12,10 @@ import java.util.List;
 import io.reactivex.Observable;
 
 /**
- * author  :  donghaijun
- * data    :  2019/3/13
- * version :  1.0
- * des     :
+ * @author  :  donghaijun
+ * @data    :  2019/3/15
+ * @version :  1.0
+ * @des     :  $des$
  */
 public class MainModel extends BaseModel implements MainContract.Model {
 

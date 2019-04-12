@@ -12,11 +12,10 @@ import androidx.fragment.app.FragmentStatePagerAdapter;
 import androidx.viewpager.widget.PagerAdapter;
 
 /**
- * <p>Fragments适配器 </p>
- *
- * @author 张华洋 2017/9/27 10:14
- * @version V1.1
- * @name ResourcePagerAdapter
+ * @author  :  donghaijun
+ * @data    :  2019/3/15
+ * @version :  1.0
+ * @des     :  $des$
  */
 public class FragmentAdapter extends FragmentStatePagerAdapter {
     private List<BaseFragment> mFragments;

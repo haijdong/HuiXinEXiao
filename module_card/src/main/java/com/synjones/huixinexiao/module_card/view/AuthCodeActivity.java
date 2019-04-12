@@ -24,11 +24,11 @@ import java.util.List;
 import androidx.annotation.NonNull;
 
 /**
- * author: donghaijun
- * -----------------
- * data:   2018/12/17
+ * @author  :  donghaijun
+ * @data    :  2019/3/15
+ * @version :  1.0
+ * @des     :  $des$
  */
-
 @Route(path = AppConstants.ACTIVITY_URL_AUTHCODE)
 public class AuthCodeActivity extends BaseActivity implements View.OnClickListener, OnRefreshListener {
     private int REFRESHTIME = 1000 * 10;

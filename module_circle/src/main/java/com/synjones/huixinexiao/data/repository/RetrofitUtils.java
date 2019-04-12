@@ -4,9 +4,10 @@ import com.synjones.huixinexiao.common_base.net.BaseRetrofit;
 import com.synjones.huixinexiao.data.api.ApiService;
 
 /**
- * @author xuhao
- * @date 2018/6/11 23:02
- * @desc 网络请求管理类
+ * @author  :  donghaijun
+ * @data    :  2019/3/15
+ * @version :  1.0
+ * @des     :  $des$
  */
 public class RetrofitUtils extends BaseRetrofit {
     private static ApiService httpService;

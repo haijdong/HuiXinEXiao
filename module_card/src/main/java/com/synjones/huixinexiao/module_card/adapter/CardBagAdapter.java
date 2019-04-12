@@ -10,9 +10,11 @@ import androidx.annotation.Nullable;
 
 
 /**
- * Created by donghaijun on 2017/10/30.
+ * @author  :  donghaijun
+ * @data    :  2019/3/15
+ * @version :  1.0
+ * @des     :  $des$
  */
-
 public class CardBagAdapter extends BaseQuickAdapter<CardInfo,BaseViewHolder> {
 
 

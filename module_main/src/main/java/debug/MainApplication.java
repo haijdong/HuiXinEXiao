@@ -3,11 +3,10 @@ package debug;
 import com.synjones.huixinexiao.common_base.app.BaseApplication;
 
 /**
- * <p>类说明</p>
- *
- * @author 张华洋 2017/2/15 20:09
- * @version V1.2.0
- * @name GirlsApplication
+ * @author  :  donghaijun
+ * @data    :  2019/3/15
+ * @version :  1.0
+ * @des     :  $des$
  */
 public class MainApplication extends BaseApplication {
 

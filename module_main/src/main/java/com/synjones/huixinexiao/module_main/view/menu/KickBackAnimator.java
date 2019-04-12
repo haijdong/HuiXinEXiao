@@ -1,7 +1,12 @@
 package com.synjones.huixinexiao.module_main.view.menu;
 
 import android.animation.TypeEvaluator;
-
+/**
+ * @author  :  donghaijun
+ * @data    :  2019/3/15
+ * @version :  1.0
+ * @des     :  $des$
+ */
 public class KickBackAnimator implements TypeEvaluator<Float> {
 	private final float s = 1.70158f;
 	float mDuration = 0f;

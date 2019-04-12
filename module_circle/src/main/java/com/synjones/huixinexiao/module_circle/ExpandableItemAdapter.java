@@ -20,7 +20,10 @@ import androidx.annotation.NonNull;
 import static android.content.Context.LAYOUT_INFLATER_SERVICE;
 
 /**
- * Created by luoxw on 2016/8/9.
+ * @author  :  donghaijun
+ * @data    :  2019/3/15
+ * @version :  1.0
+ * @des     :  $des$
  */
 public class ExpandableItemAdapter extends BaseMultiItemQuickAdapter<MultiItemEntity, BaseViewHolder> {
     private static final String TAG = ExpandableItemAdapter.class.getSimpleName();

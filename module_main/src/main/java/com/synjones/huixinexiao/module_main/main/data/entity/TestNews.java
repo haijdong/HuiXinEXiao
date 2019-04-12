@@ -3,9 +3,10 @@ package com.synjones.huixinexiao.module_main.main.data.entity;
 import java.util.List;
 
 /**
- * @author xuhao
- * @date 2018/6/12 16:10
- * @desc
+ * @author  :  donghaijun
+ * @data    :  2019/3/15
+ * @version :  1.0
+ * @des     :  $des$
  */
 public class TestNews {
 

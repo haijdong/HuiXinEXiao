@@ -6,10 +6,10 @@ import com.synjones.huixinexiao.module_main.main.model.MainModel;
 import com.synjones.huixinexiao.module_main.main.persenter.MainContract;
 
 /**
- * author  :  donghaijun
- * data    :  2019/3/13
- * version :  1.0
- * des     :
+ * @author  :  donghaijun
+ * @data    :  2019/3/15
+ * @version :  1.0
+ * @des     :  $des$
  */
 public class MainPresenter extends BasePresenter<MainContract.Model,MainContract.View> {
 

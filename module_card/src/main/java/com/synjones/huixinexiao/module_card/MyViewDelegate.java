@@ -8,11 +8,10 @@ import com.synjones.huixinexiao.common_base.base.BaseFragment;
 import androidx.annotation.Keep;
 
 /**
- * <p>类说明</p>
- *
- * @author 张华洋 2018/1/4 22:16
- * @version V2.8.3
- * @name MyViewDelegate
+ * @author  :  donghaijun
+ * @data    :  2019/3/15
+ * @version :  1.0
+ * @des     :  $des$
  */
 @Keep
 public class MyViewDelegate implements IViewDelegate {

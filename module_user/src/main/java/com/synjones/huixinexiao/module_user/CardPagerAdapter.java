@@ -10,9 +10,11 @@ import java.util.List;
 import androidx.viewpager.widget.PagerAdapter;
 
 /**
- * Created by donghaijun on 2018/1/23.
+ * @author  :  donghaijun
+ * @data    :  2019/3/15
+ * @version :  1.0
+ * @des     :  $des$
  */
-
 public class CardPagerAdapter extends PagerAdapter {
 
     private OnItemClickListener mOnItemClickListener = null;

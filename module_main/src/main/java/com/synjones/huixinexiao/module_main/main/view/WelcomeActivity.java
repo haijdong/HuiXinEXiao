@@ -23,7 +23,12 @@ import com.synjones.huixinexiao.common_base.utils.StringUtils;
 import com.synjones.huixinexiao.module_main.R;
 
 import okio.ByteString;
-
+/**
+ * @author  :  donghaijun
+ * @data    :  2019/3/15
+ * @version :  1.0
+ * @des     :  $des$
+ */
 public class WelcomeActivity extends BaseActivity {
 
     private TextView mJumpActivity;

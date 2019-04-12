@@ -3,9 +3,11 @@ package com.synjones.huixinexiao.module_circle;
 import com.chad.library.adapter.base.entity.MultiItemEntity;
 
 /**
- * Created by luoxw on 2016/8/10.
+ * @author  :  donghaijun
+ * @data    :  2019/3/15
+ * @version :  1.0
+ * @des     :  $des$
  */
-
 public class Person implements MultiItemEntity {
     public Person(String name, int age) {
         this.age = age;

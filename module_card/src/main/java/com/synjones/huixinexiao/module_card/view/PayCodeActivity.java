@@ -29,9 +29,10 @@ import androidx.annotation.NonNull;
 
 
 /**
- * author: donghaijun
- * -----------------
- * data:   2018/12/17
+ * @author  :  donghaijun
+ * @data    :  2019/3/15
+ * @version :  1.0
+ * @des     :  $des$
  */
 @Route(path = AppConstants.ACTIVITY_URL_PAYCODE)
 public class PayCodeActivity extends BaseActivity implements View.OnClickListener, OnRefreshListener {

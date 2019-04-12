@@ -3,7 +3,12 @@ package com.synjones.huixinexiao.module_school;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
-
+/**
+ * @author  :  donghaijun
+ * @data    :  2019/3/15
+ * @version :  1.0
+ * @des     :  $des$
+ */
 public class SchoolActivity extends AppCompatActivity {
 
     @Override

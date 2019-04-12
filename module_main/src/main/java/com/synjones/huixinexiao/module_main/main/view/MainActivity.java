@@ -5,7 +5,6 @@ import android.view.MenuItem;
 import android.view.View;
 
 import com.alibaba.android.arouter.facade.annotation.Route;
-import com.alibaba.android.arouter.launcher.ARouter;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.synjones.huixinexiao.common_base.app.AppConstants;
 import com.synjones.huixinexiao.common_base.app.ClassUtils;
@@ -24,7 +23,12 @@ import com.synjones.huixinexiao.module_main.view.menu.MenuWindow;
 import java.util.List;
 
 import io.reactivex.annotations.NonNull;
-
+/**
+ * @author  :  donghaijun
+ * @data    :  2019/3/15
+ * @version :  1.0
+ * @des     :  $des$
+ */
 @Route(path = AppConstants.ACTIVITY_URL_MAIN)
 public class MainActivity extends BaseMvpActivity<MainPresenter> implements MainContract.View {
 
@@ -47,7 +51,6 @@ public class MainActivity extends BaseMvpActivity<MainPresenter> implements Main
                 mPager.setCurrentItem(1);
                 return true;
             } else if (i == R.id.navigation_card) {
-//                mPager.setCurrentItem(2);
                 showMenu(navigation);
                 return true;
             } else if (i == R.id.navigation_circle) {
@@ -74,9 +77,8 @@ public class MainActivity extends BaseMvpActivity<MainPresenter> implements Main
     }
 
     private void initViewPager() {
-        mFragments = ViewManager.getInstance().getAllFragment();//这几个Fragment是主动添加到ViewManager中的
-//        BaseFragment newsFragment = getNewsFragment();//主动寻找
-        //mFragments.add(newsFragment);
+        //这几个Fragment是主动添加到ViewManager中的
+        mFragments = ViewManager.getInstance().getAllFragment();
         mPager = (NoScrollViewPager) findViewById(R.id.container_pager);
         mAdapter = new FragmentAdapter(getSupportFragmentManager(), mFragments);
         mPager.setPagerEnabled(false);
@@ -129,30 +131,20 @@ public class MainActivity extends BaseMvpActivity<MainPresenter> implements Main
             mMoreWindow = new MenuWindow(this, new MenuWindow.TypeSelectCallBack() {
                 @Override
                 public void onTypeSelected(int action) {
-                    switch (action) {
-                        case 1:  //扫一扫
-//                            startActivity(CaptureActivity.class);
-                            startActivity(AppConstants.ACTIVITY_URL_SCAN);
-//                            ARouter.getInstance().build("/card/card").navigation();
-                            break;
+                    if (action == 1) {
+                        startActivity(AppConstants.ACTIVITY_URL_SCAN);
+                    } else if (action == 2) {
+                        //认证码
+                        startActivity(AppConstants.ACTIVITY_URL_AUTHCODE);
+                    } else if (action == 3) {
+                        //付款码
+                        startActivity(AppConstants.ACTIVITY_URL_PAYCODE);
+                    } else if (action == 4) {
+                        //账单
 
-                        case 2:  //认证码
-//                            startActivity(AuthCodeActivity.class);
-                            startActivity(AppConstants.ACTIVITY_URL_AUTHCODE);
-                            break;
+                    } else if (action == 5) {
+                        //转账
 
-                        case 3:  //付款码
-//                            startActivity(PayCodeActivity.class);
-                            startActivity(AppConstants.ACTIVITY_URL_PAYCODE);
-                            break;
-
-                        case 4:  //账单
-
-                            break;
-
-                        case 5:  //转账
-//                            startActivity(AnimActivity.class);
-                            break;
                     }
                 }
             });

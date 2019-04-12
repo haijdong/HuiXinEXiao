@@ -17,10 +17,10 @@ import androidx.recyclerview.widget.RecyclerView;
 
 
 /**
- * author  :  donghaijun
- * data    :  2019/3/15
- * version :  1.0
- * des     :  $des$
+ * @author  :  donghaijun
+ * @data    :  2019/3/15
+ * @version :  1.0
+ * @des     :  $des$
  */
 public class CircleFragment extends BaseFragment<CirclePresenter> implements CircleContract.View {
 

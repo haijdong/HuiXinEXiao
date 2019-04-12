@@ -1,9 +1,11 @@
 package com.synjones.huixinexiao.module_card.data.entity;
 
 /**
- * Created by donghaijun on 2017/10/30.
+ * @author  :  donghaijun
+ * @data    :  2019/3/15
+ * @version :  1.0
+ * @des     :  $des$
  */
-
 public class CardInfo {
 
     public int live_goods_id;
