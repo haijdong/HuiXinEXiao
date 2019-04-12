@@ -4,6 +4,7 @@ import android.view.View;
 
 import com.synjones.huixinexiao.common_base.app.IViewDelegate;
 import com.synjones.huixinexiao.common_base.base.BaseFragment;
+import com.synjones.huixinexiao.module_user.view.fragment.UserFragment;
 
 import androidx.annotation.Keep;
 

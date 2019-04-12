@@ -1,9 +1,9 @@
 package com.synjones.huixinexiao.module_user;
 
 
-import com.orhanobut.logger.Logger;
 import com.synjones.huixinexiao.common_base.app.IApplicationDelegate;
 import com.synjones.huixinexiao.common_base.app.ViewManager;
+import com.synjones.huixinexiao.module_user.view.fragment.UserFragment;
 
 import androidx.annotation.Keep;
 

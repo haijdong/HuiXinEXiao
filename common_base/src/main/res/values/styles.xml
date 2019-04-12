@@ -303,4 +303,15 @@
         <item name="android:fitsSystemWindows">true</item>
         <item name="android:clipToPadding">true</item>
     </style>
+
+    <style name="common_textview_drawleft">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:textSize">16dp</item>
+        <item name="android:textColor">@color/gray1</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:drawablePadding">@dimen/x30</item>
+        <item name="android:layout_marginLeft">@dimen/x30</item>
+        <item name="android:layout_centerVertical">true</item>
+    </style>
 </resources>

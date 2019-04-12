@@ -2,7 +2,6 @@
     <string name="app_name">module_user</string>
 
     <!--user模块-->
-    <string name="card_bill">账  单</string>
     <string name="exit">退出登录</string>
     <string name="infomation">个人中心</string>
     <string name="setting">设置</string>
@@ -12,4 +11,23 @@
     <string name="health">健康助手</string>
     <string name="zhang">张</string>
     <string name="coupon">优惠券</string>
+
+    <!--指纹密码-->
+    <string name="fingerprint_pwd">指纹密码</string>
+    <!-- 手势密码登录 -->
+    <string name="gesture_forget_gesture">忘记手势密码</string>
+    <string name="gesture_default">请输入手势密码</string>
+    <string name="gesture_error">手势密码输入错误</string>
+    <string name="gesture_correct">输入正确</string>
+
+    <!-- 创建手势密码 -->
+    <string name="create_gesture">手势密码</string>
+    <string name="forget_gesture">忘记手势</string>
+    <string name="reset_gesture">修改手势</string>
+    <string name="create_gesture_default">绘制解锁图案</string>
+    <string name="create_gesture_correct">再次绘制解锁图案</string>
+    <string name="create_gesture_less_error">至少连接4个点，请重新输入</string>
+    <string name="create_gesture_confirm_error">与上一次绘制不一致，请重新绘制</string>
+    <string name="create_gesture_confirm_correct">设置成功</string>
+    <string name="create_gesture_reset">重新设置</string>
 </resources>

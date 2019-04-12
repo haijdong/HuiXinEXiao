@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/CommonBg_GraBlue"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/common_bg"
+        android:orientation="vertical">
+
+        <com.synjones.huixinexiao.common_base.view.rootview.TitleBar
+            android:id="@+id/titlebar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:title="@string/setting" />
+
+
+        <RelativeLayout
+            android:id="@+id/create_gesture"
+            android:layout_marginTop="@dimen/x2"
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x98">
+
+            <TextView
+                style="@style/common_textview_drawleft"
+                android:drawableLeft="@drawable/xtoast_info"
+                android:text="@string/create_gesture" />
+
+
+            <Switch
+                android:id="@+id/gesture_switch"
+                android:layout_width="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/x30"
+                android:thumb="@drawable/shape_switch_thumb"
+                android:track="@drawable/shape_switch_track_selector"
+                android:layout_height="wrap_content" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/forget_gesture"
+            android:layout_marginTop="@dimen/x2"
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x98">
+
+            <TextView
+                style="@style/common_textview_drawleft"
+                android:drawableLeft="@drawable/xtoast_info"
+                android:text="@string/forget_gesture" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/x30"
+                android:src="@drawable/xtoast_info" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/reset_gesture"
+            android:layout_marginTop="@dimen/x2"
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x98">
+
+            <TextView
+                style="@style/common_textview_drawleft"
+                android:drawableLeft="@drawable/xtoast_info"
+                android:text="@string/reset_gesture" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/x30"
+                android:src="@drawable/xtoast_info" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/fingerpr"
+            android:layout_marginTop="@dimen/x2"
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x98">
+
+            <TextView
+                style="@style/common_textview_drawleft"
+                android:drawableLeft="@drawable/xtoast_info"
+                android:text="@string/fingerprint_pwd" />
+
+
+            <Switch
+                android:id="@+id/fingerpr_switch"
+                android:layout_width="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/x30"
+                android:thumb="@drawable/shape_switch_thumb"
+                android:track="@drawable/shape_switch_track_selector"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+
+
+    </LinearLayout>
+</LinearLayout>

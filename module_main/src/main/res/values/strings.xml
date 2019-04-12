@@ -13,4 +13,6 @@
     <string name="card_bill">账  单</string>
     <string name="card_transfer">转  账</string>
     <string name="pay_code_refresh">条码、二维码每分钟自动刷新</string>
+
+    <string name="exit_system">再点一次退出应用</string>
 </resources>

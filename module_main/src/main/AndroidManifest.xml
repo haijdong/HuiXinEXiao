@@ -7,14 +7,14 @@
         android:theme="@style/BaseAppTheme"
         tools:ignore="GoogleAppIndexingWarning">
 
-        <activity android:name=".main.view.WelcomeActivity">
+        <activity android:name="com.synjones.huixinexiao.main.view.WelcomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".main.view.MainActivity" />
+        <activity android:name="com.synjones.huixinexiao.main.view.MainActivity" />
 
 
     </application>
