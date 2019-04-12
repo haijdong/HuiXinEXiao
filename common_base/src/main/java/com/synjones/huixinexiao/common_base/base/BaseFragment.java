@@ -12,6 +12,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.alibaba.android.arouter.launcher.ARouter;
 import com.squareup.leakcanary.RefWatcher;
 import com.synjones.huixinexiao.common_base.app.BaseApplication;
 import com.synjones.huixinexiao.common_base.mvp.BasePresenter;
@@ -152,6 +153,15 @@ public abstract class BaseFragment<T extends BasePresenter> extends RxFragment i
         }
         startActivity(intent);
     }
+
+    /**
+     * 通过ARouter跳转界面
+     * @param path 路径
+     */
+    public void startActivity(String path) {
+        ARouter.getInstance().build(path).navigation();
+    }
+
 
     /**
      * 用来检测所有Fragment的内存泄漏

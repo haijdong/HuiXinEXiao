@@ -8,6 +8,8 @@ import android.view.View;
 import android.widget.CompoundButton;
 import android.widget.Switch;
 
+import com.alibaba.android.arouter.facade.annotation.Route;
+import com.synjones.huixinexiao.common_base.app.AppConstants;
 import com.synjones.huixinexiao.common_base.base.BaseMvpActivity;
 import com.synjones.huixinexiao.common_base.db.UserInfoPreferences;
 import com.synjones.huixinexiao.common_base.utils.StringUtils;
@@ -27,12 +29,12 @@ import javax.crypto.SecretKey;
 import okio.ByteString;
 
 /**
- * 设置界面
- * <p>
- * author: donghaijun
- * -----------------
- * data:   2019/2/22
+ * @author :  donghaijun
+ * @version :  1.0
+ * @data :  2019/3/8
+ * @des :  设置页
  */
+@Route(path = AppConstants.ACTIVITY_URL_SETTING)
 public class SettingActivity extends BaseMvpActivity<SettingPresenter> implements SettingContract.View, View.OnClickListener, FingerprintDialogFragment.OnDialogResultListener, CompoundButton.OnCheckedChangeListener {
     private static final String DEFAULT_KEY_NAME = "default_key";
     private KeyStore keyStore;

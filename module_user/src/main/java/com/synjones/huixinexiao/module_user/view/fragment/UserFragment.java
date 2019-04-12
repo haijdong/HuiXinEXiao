@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.RelativeLayout;
 
+import com.synjones.huixinexiao.common_base.app.AppConstants;
 import com.synjones.huixinexiao.common_base.base.BaseFragment;
 import com.synjones.huixinexiao.common_base.glide.GlideUtils;
 import com.synjones.huixinexiao.common_base.utils.StatusBarUtil;
@@ -121,7 +122,7 @@ public class UserFragment extends BaseFragment<UserPresenter> implements UserCon
         if (v.getId() == R.id.exit) {
 
         } else if (v.getId() == R.id.setting) {
-
+            startActivity(AppConstants.ACTIVITY_URL_SETTING);
 
         }
     }
